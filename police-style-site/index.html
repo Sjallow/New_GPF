@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rwanda Police – Styled Demo</title>
+    <meta name="description" content="Demo site styled to resemble Rwanda National Police aesthetic (original assets).">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/workspace/police-style-site/assets/css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="topbar">
+            <div class="container">
+                <div class="topbar-left">
+                    <span class="badge badge-outline">Emergency: 112</span>
+                    <span class="divider" aria-hidden="true"></span>
+                    <a href="#services" class="toplink">Services</a>
+                    <a href="#departments" class="toplink">Departments</a>
+                    <a href="#contact" class="toplink">Contact</a>
+                </div>
+                <div class="topbar-right">
+                    <a class="toplink" href="#report">Report a Crime</a>
+                    <a class="toplink" href="#en">EN</a>
+                    <a class="toplink" href="#fr">FR</a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="container nav-inner">
+                <a class="brand" href="#">
+                    <img src="/workspace/police-style-site/assets/img/logo-placeholder.svg" alt="Site Logo" width="44" height="44">
+                    <span class="brand-text">Rwanda Police</span>
+                </a>
+                <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <nav id="primary-nav" class="nav-links" aria-label="Primary">
+                    <a href="#home" class="nav-link is-active">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#news" class="nav-link">News</a>
+                    <a href="#media" class="nav-link">Media</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#search" class="nav-link search-link" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/></svg>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero" aria-label="Featured">
+            <div class="hero-slider" data-autoplay="6000">
+                <div class="hero-slide is-active" style="--bg:url('/workspace/police-style-site/assets/img/hero-1.svg')">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h1>Serve, Protect, and Inspire Confidence</h1>
+                            <p>Towards a safer, crime-free Rwanda through community policing and professionalism.</p>
+                            <div class="hero-actions">
+                                <a class="btn btn-primary" href="#report">Report a Crime</a>
+                                <a class="btn btn-outline" href="#services">Explore Services</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-slide" style="--bg:url('/workspace/police-style-site/assets/img/hero-2.svg')">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h2>Community Policing at the Core</h2>
+                            <p>Engaging citizens, partners, and institutions to prevent crime and enhance safety.</p>
+                            <div class="hero-actions">
+                                <a class="btn btn-primary" href="#community">Community Programs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-controls">
+                    <button class="hero-prev" aria-label="Previous slide">&#10094;</button>
+                    <button class="hero-next" aria-label="Next slide">&#10095;</button>
+                </div>
+                <div class="hero-dots" role="tablist" aria-label="Slides"></div>
+            </div>
+            <div class="quick-tiles container" aria-label="Quick links">
+                <a class="tile" href="#emergency">
+                    <span class="tile-icon">🚨</span>
+                    <span class="tile-title">Emergency 112</span>
+                </a>
+                <a class="tile" href="#traffic">
+                    <span class="tile-icon">🚗</span>
+                    <span class="tile-title">Traffic Services</span>
+                </a>
+                <a class="tile" href="#clearance">
+                    <span class="tile-icon">🧾</span>
+                    <span class="tile-title">Police Clearance</span>
+                </a>
+                <a class="tile" href="#report">
+                    <span class="tile-icon">📢</span>
+                    <span class="tile-title">Report Incident</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="news" class="section news">
+            <div class="container section-header">
+                <h2>Latest News</h2>
+                <a class="link-more" href="#all-news">View all</a>
+            </div>
+            <div class="container news-grid">
+                <article class="card">
+                    <a class="card-media" href="#"><img src="/workspace/police-style-site/assets/img/news-1.svg" alt="News item" loading="lazy"></a>
+                    <div class="card-body">
+                        <a class="chip" href="#category">Operations</a>
+                        <h3 class="card-title"><a href="#">Coordinated operation disrupts illicit trafficking ring</a></h3>
+                        <p class="card-excerpt">Multiple arrests and seizures made in collaboration with regional partners.</p>
+                        <div class="card-meta">Sep 15, 2025</div>
+                    </div>
+                </article>
+                <article class="card">
+                    <a class="card-media" href="#"><img src="/workspace/police-style-site/assets/img/news-2.svg" alt="News item" loading="lazy"></a>
+                    <div class="card-body">
+                        <a class="chip" href="#category">Community</a>
+                        <h3 class="card-title"><a href="#">Community outreach strengthens safety partnerships</a></h3>
+                        <p class="card-excerpt">Engagements with youth and local leaders to promote crime prevention.</p>
+                        <div class="card-meta">Sep 12, 2025</div>
+                    </div>
+                </article>
+                <article class="card">
+                    <a class="card-media" href="#"><img src="/workspace/police-style-site/assets/img/news-3.svg" alt="News item" loading="lazy"></a>
+                    <div class="card-body">
+                        <a class="chip" href="#category">Traffic</a>
+                        <h3 class="card-title"><a href="#">Road safety campaign launches ahead of holidays</a></h3>
+                        <p class="card-excerpt">Increased patrols and awareness to reduce accidents nationwide.</p>
+                        <div class="card-meta">Sep 10, 2025</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section press">
+            <div class="container section-header">
+                <h2>Press Releases</h2>
+                <a class="link-more" href="#all-press">View all</a>
+            </div>
+            <div class="container press-list">
+                <a class="press-item" href="#">
+                    <span class="press-date">Sep 08, 2025</span>
+                    <span class="press-title">Statement on cross-border security cooperation</span>
+                </a>
+                <a class="press-item" href="#">
+                    <span class="press-date">Sep 02, 2025</span>
+                    <span class="press-title">Update on national recruitment process</span>
+                </a>
+                <a class="press-item" href="#">
+                    <span class="press-date">Aug 28, 2025</span>
+                    <span class="press-title">Public advisory on cyber fraud schemes</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="/workspace/police-style-site/assets/img/logo-placeholder.svg" alt="Logo" width="56" height="56">
+                <p>Committed to safety, rule of law, and community partnership.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <ul>
+                    <li>Emergency: 112</li>
+                    <li>Traffic: 113</li>
+                    <li>Anti-gender-based violence: 3512</li>
+                    <li>Email: info@example.gov.rw</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#report">Report a Crime</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Follow</h3>
+                <ul class="socials">
+                    <li><a href="#">X</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="subfooter">
+            <div class="container subfooter-inner">
+                <p>© <span id="year"></span> Rwanda Police Styled Demo. Not an official website.</p>
+                <a href="#accessibility">Accessibility</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/workspace/police-style-site/assets/js/main.js" defer></script>
+</body>
+</html>
+
