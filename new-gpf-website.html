@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gambia Police Force - Rwanda Design Style</title>
+    <title>New GPF - Gambia Police Force (Rwanda Design Style)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* Reset and Base Styles */
@@ -21,7 +21,7 @@
             overflow-x: hidden;
         }
 
-        /* Rwanda Police Color Variables */
+        /* Rwanda Police Color Variables - Applied to Gambia Police Force */
         :root {
             --primary-blue: #1a365d;
             --secondary-blue: #2d5a87;
@@ -576,6 +576,82 @@
             transform: scale(1.05);
         }
 
+        /* Services Section */
+        .services-section-rwanda {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border: 1px solid #e9ecef;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .service-image {
+            height: 200px;
+            background: linear-gradient(45deg, #1a365d, #2d5a87);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+        }
+
+        .service-content {
+            padding: 30px;
+        }
+
+        .service-content h3 {
+            color: #1a365d;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .service-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .btn-outline-service {
+            border: 2px solid #1a365d;
+            color: #1a365d;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-outline-service:hover {
+            background: #1a365d;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .container {
@@ -617,6 +693,10 @@
                 grid-template-columns: 1fr !important;
             }
             
+            .services-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
             .search-box input {
                 width: 150px !important;
             }
@@ -628,7 +708,7 @@
     </style>
 </head>
 <body>
-    <!-- Top Bar - Exact Rwanda Police Style -->
+    <!-- Top Bar - Exact Rwanda Police Style with Gambia Information -->
     <div class="top-bar-rwanda">
         <div class="container">
             <div class="top-bar-content">
@@ -644,17 +724,17 @@
                         <a href="#">AR</a>
                     </div>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://facebook.com/gambiapolice"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/gambiapolice"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/gambiapolice"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/gambiapolice"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Main Header - Exact Rwanda Police Style -->
+    <!-- Main Header - Exact Rwanda Police Style with Gambia Branding -->
     <header class="main-header-rwanda">
         <div class="container">
             <div class="header-content">
@@ -693,7 +773,7 @@
         </div>
     </header>
 
-    <!-- News Ticker - Exact Rwanda Police Style -->
+    <!-- News Ticker - Exact Rwanda Police Style with Gambia Content -->
     <div class="news-ticker-rwanda">
         <div class="container">
             <div class="ticker-content">
@@ -721,7 +801,7 @@
         </div>
     </div>
 
-    <!-- Hero Section - Exact Rwanda Police Style -->
+    <!-- Hero Section - Exact Rwanda Police Style with Gambia Content -->
     <section class="hero-section-rwanda">
         <div class="hero-background"></div>
         <div class="container">
@@ -776,7 +856,7 @@
         </div>
     </section>
 
-    <!-- Emergency Numbers Section - Exact Rwanda Police Style -->
+    <!-- Emergency Numbers Section - Exact Rwanda Police Style with Gambia Numbers -->
     <section class="emergency-section-rwanda">
         <div class="container">
             <h2 class="section-title">
@@ -849,6 +929,58 @@
         </div>
     </section>
 
+    <!-- Services Section - Exact Rwanda Police Style with Gambia Services -->
+    <section class="services-section-rwanda">
+        <div class="container">
+            <h2 class="section-title">
+                Our Services
+            </h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 60px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                We provide comprehensive police services to ensure the safety and security of all citizens in The Gambia.
+            </p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Traffic and Road Safety</h3>
+                        <p>Ensuring safe roads and traffic management across The Gambia through comprehensive traffic control and road safety initiatives.</p>
+                        <a href="#" class="btn-outline-service">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Testing and Licensing</h3>
+                        <p>Professional testing and licensing services for drivers, ensuring competent and qualified drivers on our roads.</p>
+                        <a href="#" class="btn-outline-service">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Automobile Inspections</h3>
+                        <p>Comprehensive vehicle inspection services to ensure roadworthiness and safety standards for all vehicles.</p>
+                        <a href="#" class="btn-outline-service">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script>
         // Pause news ticker on hover
         const ticker = document.querySelector('.ticker-scroll');
@@ -913,6 +1045,16 @@
                 document.body.style.opacity = '1';
             }, 100);
         });
+
+        // Mobile menu toggle (if needed)
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu-rwanda');
+        
+        if (mobileMenuToggle && navMenu) {
+            mobileMenuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
     </script>
 </body>
 </html>
