@@ -377,6 +377,11 @@ add_action('admin_menu', 'gpf_add_admin_menu');
 // Include template switcher
 require get_template_directory() . '/template-switcher.php';
 
+// Force Rwanda Police template to be active
+if (!get_option('gpf_active_template')) {
+    update_option('gpf_active_template', 'rwanda');
+}
+
 // Manual editor page
 function gpf_manual_editor_page() {
     ?>

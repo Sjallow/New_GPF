@@ -1,4 +1,12 @@
-<?php get_header(); ?>
+<?php 
+// Force Rwanda header
+$active_template = get_option('gpf_active_template', 'rwanda');
+if ($active_template === 'rwanda') {
+    include get_template_directory() . '/header-rwanda.php';
+} else {
+    get_header(); 
+}
+?>
 
 <main id="main" class="site-main">
     <!-- Hero Section with Latest Posts - Rwanda Police Style -->
