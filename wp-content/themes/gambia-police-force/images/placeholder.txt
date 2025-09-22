@@ -1,0 +1,14 @@
+Placeholder for images directory
+This directory should contain:
+- rwanda-police-logo.png (Rwanda National Police main logo)
+- dove-logo.png (Dove with olive branch logo)
+- news-main.jpg (Main news article image)
+- video-thumbnail.jpg (Video thumbnail)
+- photo-gallery.jpg (Photo gallery image)
+- twitter-feed.jpg (Twitter feed image)
+- national-police-college.jpg (National Police College image)
+- police-training-school-gishari.jpg (Police Training School Gishari image)
+- counter-terrorism-training-center.jpg (Counter Terrorism Training Center image)
+- traffic-safety.jpg (Traffic and Road Safety service image)
+- testing-licensing.jpg (Testing and Licensing service image)
+- vehicle-inspection.jpg (Vehicle Inspection service image)

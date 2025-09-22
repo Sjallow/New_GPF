@@ -1,0 +1,98 @@
+{
+  "version": "0.4",
+  "title": "Rwanda National Police Homepage",
+  "type": "page",
+  "content": [
+    {
+      "id": "hero-section",
+      "elType": "section",
+      "settings": {
+        "background_background": "gradient",
+        "background_color": "#1e3a8a",
+        "background_color_b": "#1e40af"
+      },
+      "elements": [
+        {
+          "id": "hero-slider",
+          "elType": "widget",
+          "widgetType": "shortcode",
+          "settings": {
+            "shortcode": "[smart_slider id=\"1\"]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emergency-section",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#ffffff",
+        "padding": {
+          "unit": "px",
+          "top": "60",
+          "right": "0",
+          "bottom": "60",
+          "left": "0"
+        }
+      },
+      "elements": [
+        {
+          "id": "emergency-title",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Emergency Toll-Free Numbers",
+            "size": "h2",
+            "align": "center",
+            "color": "#1e3a8a"
+          }
+        },
+        {
+          "id": "emergency-grid",
+          "elType": "widget",
+          "widgetType": "shortcode",
+          "settings": {
+            "shortcode": "[emergency_numbers]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "services-section",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#ffffff",
+        "padding": {
+          "unit": "px",
+          "top": "60",
+          "right": "0",
+          "bottom": "60",
+          "left": "0"
+        }
+      },
+      "elements": [
+        {
+          "id": "services-title",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Services",
+            "size": "h2",
+            "align": "center",
+            "color": "#1e3a8a"
+          }
+        },
+        {
+          "id": "services-grid",
+          "elType": "widget",
+          "widgetType": "shortcode",
+          "settings": {
+            "shortcode": "[services_grid]"
+          }
+        }
+      ]
+    }
+  ]
+}

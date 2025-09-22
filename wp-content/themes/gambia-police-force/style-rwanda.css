@@ -1,0 +1,582 @@
+/*
+Theme Name: Gambia Police Force - Rwanda Style
+Description: Exact replica of Rwanda Police website design
+Version: 1.0
+Author: Custom Development
+*/
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* Rwanda Police Color Variables */
+:root {
+    --primary-blue: #1a365d;
+    --secondary-blue: #2d5a87;
+    --accent-yellow: #ffd700;
+    --white: #ffffff;
+    --black: #000000;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #adb5bd;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+    --success: #27ae60;
+    --warning: #f39c12;
+    --danger: #e74c3c;
+    --info: #3498db;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* Rwanda Police Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Button Styles - Rwanda Police */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary-rwanda {
+    background: var(--accent-yellow);
+    color: var(--primary-blue);
+    border: 2px solid var(--accent-yellow);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-primary-rwanda:hover {
+    background: var(--primary-blue);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.btn-outline-rwanda {
+    background: transparent;
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+}
+
+.btn-outline-rwanda:hover {
+    background: var(--primary-blue);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Card Styles - Rwanda Police */
+.emergency-card,
+.service-card,
+.unit-card {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.emergency-card:hover,
+.service-card:hover,
+.unit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.emergency-card::before,
+.service-card::before,
+.unit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.emergency-card:hover::before,
+.service-card:hover::before,
+.unit-card:hover::before {
+    left: 100%;
+}
+
+/* News Ticker Animation */
+.ticker-wrapper {
+    animation: scroll 30s linear infinite;
+}
+
+.ticker-wrapper:hover {
+    animation-play-state: paused;
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Staggered Animation for Cards */
+.emergency-card:nth-child(1) { animation: fadeInUp 0.6s ease-out; }
+.emergency-card:nth-child(2) { animation: fadeInUp 0.6s ease-out 0.1s both; }
+.emergency-card:nth-child(3) { animation: fadeInUp 0.6s ease-out 0.2s both; }
+.emergency-card:nth-child(4) { animation: fadeInUp 0.6s ease-out 0.3s both; }
+.emergency-card:nth-child(5) { animation: fadeInUp 0.6s ease-out 0.4s both; }
+.emergency-card:nth-child(6) { animation: fadeInUp 0.6s ease-out 0.5s both; }
+
+.service-card:nth-child(1) { animation: fadeInUp 0.6s ease-out; }
+.service-card:nth-child(2) { animation: fadeInUp 0.6s ease-out 0.2s both; }
+.service-card:nth-child(3) { animation: fadeInUp 0.6s ease-out 0.4s both; }
+
+/* Navigation Styles - Rwanda Police */
+.nav-menu-rwanda {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.nav-menu-rwanda li {
+    position: relative;
+}
+
+.nav-menu-rwanda a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-menu-rwanda li:hover > a {
+    background: var(--accent-yellow);
+    color: var(--primary-blue);
+}
+
+.menu-item-has-children:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.menu-item-has-children:hover > a i {
+    transform: rotate(180deg);
+}
+
+.sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--primary-blue);
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    padding: 10px 0;
+    border-top: 3px solid var(--accent-yellow);
+}
+
+.sub-menu li {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sub-menu li:last-child {
+    border-bottom: none;
+}
+
+.sub-menu a {
+    padding: 12px 20px;
+    font-size: 14px;
+    white-space: nowrap;
+    display: block;
+    border-left: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.sub-menu li:hover a {
+    background: var(--accent-yellow);
+    color: var(--primary-blue);
+    border-left-color: var(--primary-blue);
+}
+
+/* Hero Section - Rwanda Police */
+.hero-section-rwanda {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    color: var(--white);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section-rwanda::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('images/hero-pattern.png') repeat;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+/* Emergency Section - Rwanda Police */
+.emergency-section-rwanda {
+    background: var(--gray-100);
+    padding: 80px 0;
+}
+
+.emergency-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Services Section - Rwanda Police */
+.services-section-rwanda {
+    background: var(--white);
+    padding: 80px 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+/* News Section - Rwanda Police */
+.news-section-rwanda {
+    background: var(--gray-100);
+    padding: 80px 0;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+/* Form Styles - Rwanda Police */
+input[type="text"],
+input[type="email"],
+input[type="search"],
+textarea {
+    padding: 12px 15px;
+    border: 1px solid var(--gray-300);
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.1);
+}
+
+/* Mobile Responsive - Rwanda Police */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .nav-menu-rwanda {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+    
+    .nav-menu-rwanda li {
+        width: 100%;
+    }
+    
+    .nav-menu-rwanda a {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .sub-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: rgba(0,0,0,0.2);
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    .emergency-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .news-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .news-meta {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+    
+    .newsletter form {
+        flex-direction: column !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2rem !important;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    
+    .emergency-card,
+    .service-card {
+        padding: 20px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .top-bar-rwanda,
+    .main-header-rwanda,
+    .news-ticker-rwanda {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-blue: #000080;
+        --accent-yellow: #ffff00;
+        --white: #ffffff;
+        --black: #000000;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus Styles for Accessibility */
+.btn:focus,
+input:focus,
+textarea:focus,
+a:focus {
+    outline: 2px solid var(--accent-yellow);
+    outline-offset: 2px;
+}
+
+/* Skip Link for Accessibility */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 999999;
+    padding: 8px 16px;
+    background: var(--primary-blue);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    left: 6px;
+    top: 7px;
+}

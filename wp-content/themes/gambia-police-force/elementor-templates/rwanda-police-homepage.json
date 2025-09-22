@@ -1,0 +1,445 @@
+{
+  "version": "0.4",
+  "title": "Rwanda Police Homepage Template",
+  "type": "page",
+  "content": [
+    {
+      "id": "hero-section",
+      "elType": "section",
+      "settings": {
+        "background_background": "gradient",
+        "background_color": "#1a365d",
+        "background_color_b": "#2d5a87",
+        "background_gradient_angle": 135,
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "80",
+          "left": "0"
+        }
+      },
+      "elements": [
+        {
+          "id": "hero-container",
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed",
+            "gap": {
+              "unit": "px",
+              "size": 60
+            },
+            "flex_direction": "row",
+            "flex_justify_content": "space-between",
+            "flex_align_items": "center"
+          },
+          "elements": [
+            {
+              "id": "hero-text",
+              "elType": "container",
+              "settings": {
+                "flex": "1",
+                "flex_direction": "column",
+                "flex_justify_content": "flex-start"
+              },
+              "elements": [
+                {
+                  "id": "hero-title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Welcome to Gambia Police Force",
+                    "size": "xl",
+                    "color": "#ffffff",
+                    "text_shadow_text": "2px 2px 4px rgba(0,0,0,0.5)",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 56
+                    },
+                    "typography_font_weight": "bold",
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": 1
+                    }
+                  }
+                },
+                {
+                  "id": "hero-description",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "Serving and protecting the people of The Gambia with integrity, professionalism, and dedication.",
+                    "color": "#ffffff",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 20
+                    },
+                    "typography_opacity": 0.9
+                  }
+                },
+                {
+                  "id": "hero-buttons",
+                  "elType": "container",
+                  "settings": {
+                    "flex_direction": "row",
+                    "flex_wrap": "wrap",
+                    "gap": {
+                      "unit": "px",
+                      "size": 20
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "contact-btn",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Contact Us",
+                        "button_css_id": "contact-btn",
+                        "background_color": "#ffd700",
+                        "color": "#1a365d",
+                        "border_radius": {
+                          "unit": "px",
+                          "top": 5,
+                          "right": 5,
+                          "bottom": 5,
+                          "left": 5
+                        },
+                        "button_text_padding": {
+                          "unit": "px",
+                          "top": 15,
+                          "right": 30,
+                          "bottom": 15,
+                          "left": 30
+                        },
+                        "typography_font_weight": "bold",
+                        "button_text_hover_animation": "grow"
+                      }
+                    },
+                    {
+                      "id": "services-btn",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Our Services",
+                        "button_css_id": "services-btn",
+                        "background_color": "transparent",
+                        "color": "#ffd700",
+                        "border_border": "solid",
+                        "border_width": {
+                          "unit": "px",
+                          "top": 2,
+                          "right": 2,
+                          "bottom": 2,
+                          "left": 2
+                        },
+                        "border_color": "#ffd700",
+                        "border_radius": {
+                          "unit": "px",
+                          "top": 5,
+                          "right": 5,
+                          "bottom": 5,
+                          "left": 5
+                        },
+                        "button_text_padding": {
+                          "unit": "px",
+                          "top": 15,
+                          "right": 30,
+                          "bottom": 15,
+                          "left": 30
+                        },
+                        "typography_font_weight": "bold",
+                        "button_text_hover_animation": "grow"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "hero-posts",
+              "elType": "container",
+              "settings": {
+                "flex": "1",
+                "flex_direction": "column",
+                "background_background": "classic",
+                "background_color": "rgba(255,255,255,0.1)",
+                "border_radius": {
+                  "unit": "px",
+                  "top": 15,
+                  "right": 15,
+                  "bottom": 15,
+                  "left": 15
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": 30,
+                  "right": 30,
+                  "bottom": 30,
+                  "left": 30
+                }
+              },
+              "elements": [
+                {
+                  "id": "posts-title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Latest News & Updates",
+                    "size": "medium",
+                    "color": "#ffd700",
+                    "align": "center",
+                    "text_shadow_text": "1px 1px 2px rgba(0,0,0,0.5)",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 24
+                    }
+                  }
+                },
+                {
+                  "id": "posts-container",
+                  "elType": "widget",
+                  "widgetType": "posts",
+                  "settings": {
+                    "posts_per_page": 3,
+                    "post_title_color": "#ffffff",
+                    "post_excerpt_color": "#ffffff",
+                    "post_meta_color": "#ffffff",
+                    "post_border_radius": {
+                      "unit": "px",
+                          "top": 10,
+                          "right": 10,
+                          "bottom": 10,
+                          "left": 10
+                    },
+                    "post_background_color": "rgba(255,255,255,0.1)",
+                    "post_padding": {
+                      "unit": "px",
+                          "top": 20,
+                          "right": 20,
+                          "bottom": 20,
+                          "left": 20
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "emergency-section",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#f8f9fa",
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "80",
+          "left": "0"
+        }
+      },
+      "elements": [
+        {
+          "id": "emergency-container",
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed"
+          },
+          "elements": [
+            {
+              "id": "emergency-title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Emergency Toll-Free Numbers",
+                "size": "xl",
+                "color": "#1a365d",
+                "align": "center",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 40
+                }
+              }
+            },
+            {
+              "id": "emergency-subtitle",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "In case of emergency, call these numbers for immediate assistance",
+                "color": "#666666",
+                "align": "center",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 20
+                }
+              }
+            },
+            {
+              "id": "emergency-grid",
+              "elType": "container",
+              "settings": {
+                "flex_direction": "row",
+                "flex_wrap": "wrap",
+                "gap": {
+                  "unit": "px",
+                  "size": 30
+                },
+                "justify_content": "center"
+              },
+              "elements": [
+                {
+                  "id": "emergency-card-1",
+                  "elType": "container",
+                  "settings": {
+                    "background_background": "classic",
+                    "background_color": "#ffffff",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": 15,
+                      "right": 15,
+                      "bottom": 15,
+                      "left": 15
+                    },
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_box_shadow": {
+                      "horizontal": 0,
+                      "vertical": 8,
+                      "blur": 25,
+                      "spread": 0,
+                      "color": "rgba(0,0,0,0.1)"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": 30,
+                      "right": 30,
+                      "bottom": 30,
+                      "left": 30
+                    },
+                    "flex": "0 0 300px",
+                    "flex_direction": "column",
+                    "align_items": "center",
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": 4,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "border_color": "#e74c3c"
+                  },
+                  "elements": [
+                    {
+                      "id": "emergency-icon-1",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "icon": {
+                          "value": "fas fa-ambulance",
+                          "library": "fa-solid"
+                        },
+                        "icon_color": "#ffffff",
+                        "icon_size": {
+                          "unit": "px",
+                          "size": 30
+                        },
+                        "background_background": "classic",
+                        "background_color": "#e74c3c",
+                        "border_radius": {
+                          "unit": "px",
+                          "top": 50,
+                          "right": 50,
+                          "bottom": 50,
+                          "left": 50
+                        },
+                        "width": {
+                          "unit": "px",
+                          "size": 80
+                        },
+                        "height": {
+                          "unit": "px",
+                          "size": 80
+                        }
+                      }
+                    },
+                    {
+                      "id": "emergency-title-1",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Emergency",
+                        "size": "medium",
+                        "color": "#1a365d",
+                        "align": "center",
+                        "typography_font_weight": "bold"
+                      }
+                    },
+                    {
+                      "id": "emergency-number-1",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "117",
+                        "color": "#e74c3c",
+                        "align": "center",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 32
+                        },
+                        "typography_font_weight": "bold"
+                      }
+                    },
+                    {
+                      "id": "emergency-desc-1",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "24/7 Emergency Response",
+                        "color": "#666666",
+                        "align": "center",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 14
+                        }
+                      }
+                    },
+                    {
+                      "id": "emergency-btn-1",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Call Now",
+                        "background_color": "#e74c3c",
+                        "color": "#ffffff",
+                        "border_radius": {
+                          "unit": "px",
+                          "top": 25,
+                          "right": 25,
+                          "bottom": 25,
+                          "left": 25
+                        },
+                        "button_text_padding": {
+                          "unit": "px",
+                          "top": 10,
+                          "right": 20,
+                          "bottom": 10,
+                          "left": 20
+                        },
+                        "typography_font_weight": "bold"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
