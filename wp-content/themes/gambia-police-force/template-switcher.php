@@ -88,7 +88,7 @@ function gpf_template_switcher_page() {
 add_filter('template_include', 'gpf_template_loader');
 
 function gpf_template_loader($template) {
-    $active_template = get_option('gpf_active_template', 'original');
+    $active_template = get_option('gpf_active_template', 'rwanda');
     
     if ($active_template === 'rwanda') {
         // Use Rwanda Police templates
@@ -107,7 +107,7 @@ function gpf_template_loader($template) {
 add_filter('get_header', 'gpf_header_switcher');
 
 function gpf_header_switcher($name) {
-    $active_template = get_option('gpf_active_template', 'original');
+    $active_template = get_option('gpf_active_template', 'rwanda');
     
     if ($active_template === 'rwanda') {
         $rwanda_header = get_template_directory() . '/header-rwanda.php';
@@ -125,7 +125,7 @@ function gpf_header_switcher($name) {
 add_action('admin_bar_menu', 'gpf_template_indicator', 999);
 
 function gpf_template_indicator($wp_admin_bar) {
-    $active_template = get_option('gpf_active_template', 'original');
+    $active_template = get_option('gpf_active_template', 'rwanda');
     $template_name = $active_template === 'rwanda' ? 'Rwanda Police' : 'Original';
     
     $wp_admin_bar->add_node(array(

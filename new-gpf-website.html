@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New GPF - Gambia Police Force (Rwanda Design Style)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Rwanda Police Color Variables - Applied to Gambia Police Force */
+        :root {
+            --primary-blue: #1a365d;
+            --secondary-blue: #2d5a87;
+            --accent-yellow: #ffd700;
+            --white: #ffffff;
+            --black: #000000;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-300: #dee2e6;
+            --gray-400: #ced4da;
+            --gray-500: #adb5bd;
+            --gray-600: #6c757d;
+            --gray-700: #495057;
+            --gray-800: #343a40;
+            --gray-900: #212529;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+            --info: #3498db;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Rwanda Police Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Top Bar - Exact Rwanda Police Style */
+        .top-bar-rwanda {
+            background: #1a365d;
+            color: white;
+            padding: 8px 0;
+            font-size: 13px;
+            border-bottom: 2px solid #2d5a87;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .top-left {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .top-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .language-selector {
+            display: flex;
+            gap: 10px;
+        }
+
+        .language-selector a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+
+        .language-selector a.active {
+            color: #ffd700;
+            font-weight: bold;
+            background: rgba(255,215,0,0.1);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-links a {
+            color: #ffd700;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+
+        /* Main Header - Exact Rwanda Police Style */
+        .main-header-rwanda {
+            background: #2d5a87;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .title-section h1 {
+            color: white;
+            font-size: 28px;
+            margin: 0;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
+        }
+
+        .title-section p {
+            color: #ffd700;
+            font-size: 14px;
+            margin: 5px 0 0 0;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* Navigation */
+        .nav-menu-rwanda {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 30px;
+        }
+
+        .nav-menu-rwanda a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-menu-rwanda li:hover > a {
+            background: #ffd700;
+            color: #1a365d;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            padding: 8px 35px 8px 12px;
+            border: 1px solid #4a90a4;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            width: 200px;
+            transition: all 0.3s;
+        }
+
+        .search-box input:focus {
+            background: white;
+            color: #333;
+            width: 250px;
+            outline: none;
+        }
+
+        .search-box i {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ffd700;
+            cursor: pointer;
+        }
+
+        /* News Ticker - Exact Rwanda Police Style */
+        .news-ticker-rwanda {
+            background: #1a365d;
+            color: white;
+            padding: 8px 0;
+            border-bottom: 2px solid #ffd700;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ticker-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .ticker-label {
+            background: #ffd700;
+            color: #1a365d;
+            padding: 5px 15px;
+            font-weight: bold;
+            font-size: 12px;
+            white-space: nowrap;
+            border-radius: 3px;
+            animation: pulse 2s infinite;
+        }
+
+        .ticker-wrapper {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ticker-scroll {
+            display: flex;
+            animation: scroll 30s linear infinite;
+            white-space: nowrap;
+        }
+
+        .ticker-item {
+            margin-right: 50px;
+            white-space: nowrap;
+            display: inline-block;
+        }
+
+        .ticker-item a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .ticker-item a:hover {
+            color: #ffd700;
+        }
+
+        /* Hero Section - Exact Rwanda Police Style */
+        .hero-section-rwanda {
+            background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            line-height: 1.2;
+            letter-spacing: 1px;
+        }
+
+        .hero-text p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary-rwanda {
+            background: #ffd700;
+            color: #1a365d;
+        }
+
+        .btn-primary-rwanda:hover {
+            background: #2d5a87;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .btn-outline-rwanda {
+            border: 2px solid #ffd700;
+            color: #ffd700;
+            background: transparent;
+        }
+
+        .btn-outline-rwanda:hover {
+            background: #ffd700;
+            color: #1a365d;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .hero-posts {
+            animation: fadeInRight 1s ease-out;
+        }
+
+        .posts-carousel {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .post-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            transition: all 0.3s;
+            cursor: pointer;
+            border-left: 4px solid #ffd700;
+        }
+
+        .post-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateX(10px);
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .post-meta span:first-child {
+            background: #ffd700;
+            color: #1a365d;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* Emergency Numbers Section - Exact Rwanda Police Style */
+        .emergency-section-rwanda {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1a365d;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: #ffd700;
+            display: block;
+            margin: 15px auto 0;
+        }
+
+        .emergency-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .emergency-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .emergency-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .emergency-card:nth-child(1) { border-top: 4px solid #e74c3c; }
+        .emergency-card:nth-child(2) { border-top: 4px solid #f39c12; }
+        .emergency-card:nth-child(3) { border-top: 4px solid #9b59b6; }
+        .emergency-card:nth-child(4) { border-top: 4px solid #27ae60; }
+        .emergency-card:nth-child(5) { border-top: 4px solid #3498db; }
+        .emergency-card:nth-child(6) { border-top: 4px solid #e67e22; }
+
+        .phone-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            animation: pulse 2s infinite;
+            position: relative;
+        }
+
+        .emergency-card:nth-child(1) .phone-icon { background: #e74c3c; }
+        .emergency-card:nth-child(2) .phone-icon { background: #f39c12; animation-delay: 0.5s; }
+        .emergency-card:nth-child(3) .phone-icon { background: #9b59b6; animation-delay: 1s; }
+        .emergency-card:nth-child(4) .phone-icon { background: #27ae60; animation-delay: 1.5s; }
+        .emergency-card:nth-child(5) .phone-icon { background: #3498db; animation-delay: 2s; }
+        .emergency-card:nth-child(6) .phone-icon { background: #e67e22; animation-delay: 2.5s; }
+
+        .phone-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .emergency-card:nth-child(1) .phone-number { color: #e74c3c; }
+        .emergency-card:nth-child(2) .phone-number { color: #f39c12; }
+        .emergency-card:nth-child(3) .phone-number { color: #9b59b6; }
+        .emergency-card:nth-child(4) .phone-number { color: #27ae60; }
+        .emergency-card:nth-child(5) .phone-number { color: #3498db; }
+        .emergency-card:nth-child(6) .phone-number { color: #e67e22; }
+
+        .call-btn {
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-block;
+            color: white;
+        }
+
+        .emergency-card:nth-child(1) .call-btn { background: #e74c3c; }
+        .emergency-card:nth-child(2) .call-btn { background: #f39c12; }
+        .emergency-card:nth-child(3) .call-btn { background: #9b59b6; }
+        .emergency-card:nth-child(4) .call-btn { background: #27ae60; }
+        .emergency-card:nth-child(5) .call-btn { background: #3498db; }
+        .emergency-card:nth-child(6) .call-btn { background: #e67e22; }
+
+        .call-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Services Section */
+        .services-section-rwanda {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border: 1px solid #e9ecef;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .service-image {
+            height: 200px;
+            background: linear-gradient(45deg, #1a365d, #2d5a87);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+        }
+
+        .service-content {
+            padding: 30px;
+        }
+
+        .service-content h3 {
+            color: #1a365d;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .service-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .btn-outline-service {
+            border: 2px solid #1a365d;
+            color: #1a365d;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-outline-service:hover {
+            background: #1a365d;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .top-bar-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-menu-rwanda {
+                flex-direction: column;
+                width: 100%;
+                gap: 0;
+            }
+            
+            .nav-menu-rwanda a {
+                display: block;
+                padding: 15px;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr !important;
+                gap: 40px !important;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.5rem !important;
+            }
+            
+            .emergency-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .search-box input {
+                width: 150px !important;
+            }
+            
+            .search-box input:focus {
+                width: 200px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar - Exact Rwanda Police Style with Gambia Information -->
+    <div class="top-bar-rwanda">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-left">
+                    <span><i class="fas fa-envelope" style="color: #ffd700; margin-right: 5px;"></i> info@gambiapolice.gov.gm</span>
+                    <span><i class="fas fa-phone" style="color: #ffd700; margin-right: 5px;"></i> Emergency: 117</span>
+                    <span><i class="fas fa-phone" style="color: #ffd700; margin-right: 5px;"></i> +220 422 2000</span>
+                </div>
+                <div class="top-right">
+                    <div class="language-selector">
+                        <a href="#" class="active">EN</a>
+                        <a href="#">FR</a>
+                        <a href="#">AR</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://facebook.com/gambiapolice"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/gambiapolice"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/gambiapolice"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/gambiapolice"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header - Exact Rwanda Police Style with Gambia Branding -->
+    <header class="main-header-rwanda">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo Section -->
+                <div class="logo-section">
+                    <div class="logo">
+                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, #1a365d, #2d5a87); align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold; display: flex;">GPF</div>
+                    </div>
+                    <div class="title-section">
+                        <h1>GAMBIA POLICE FORCE</h1>
+                        <p>Service - Protection - Integrity</p>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="main-nav-rwanda">
+                    <ul class="nav-menu-rwanda">
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Media</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="search" placeholder="Search...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- News Ticker - Exact Rwanda Police Style with Gambia Content -->
+    <div class="news-ticker-rwanda">
+        <div class="container">
+            <div class="ticker-content">
+                <div class="ticker-label">LATEST NEWS</div>
+                <div class="ticker-wrapper">
+                    <div class="ticker-scroll">
+                        <div class="ticker-item">
+                            <a href="#">Gambia Police Force launches new community safety initiative</a>
+                        </div>
+                        <div class="ticker-item">
+                            <a href="#">Traffic safety campaign reduces accidents by 25%</a>
+                        </div>
+                        <div class="ticker-item">
+                            <a href="#">New police training program graduates 50 officers</a>
+                        </div>
+                        <div class="ticker-item">
+                            <a href="#">Community policing strengthens neighborhood security</a>
+                        </div>
+                        <div class="ticker-item">
+                            <a href="#">Emergency hotline 117 now available 24/7</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section - Exact Rwanda Police Style with Gambia Content -->
+    <section class="hero-section-rwanda">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <!-- Hero Text -->
+                <div class="hero-text">
+                    <h1>Welcome to Gambia Police Force</h1>
+                    <p>Serving and protecting the people of The Gambia with integrity, professionalism, and dedication to maintain peace and security.</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary-rwanda">
+                            Contact Us <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-rwanda">
+                            Our Services <i class="fas fa-shield-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Latest Posts Carousel -->
+                <div class="hero-posts">
+                    <h3 style="color: #ffd700; font-size: 1.5rem; margin-bottom: 30px; text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Latest News & Updates</h3>
+                    <div class="posts-carousel">
+                        <div class="post-item">
+                            <div class="post-meta">
+                                <span>NEWS</span>
+                                <span style="font-size: 14px; opacity: 0.8; color: white;">Dec 22, 2024</span>
+                            </div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 10px; line-height: 1.4; color: white;">IGP Mamour Jobe officiates the pass-out of police officers</h4>
+                            <p style="font-size: 14px; opacity: 0.8; line-height: 1.5; color: white;">The Inspector General of Police, Mamour Jobe, presided over the graduation ceremony of new police officers, marking a significant milestone in the force's capacity building efforts.</p>
+                        </div>
+                        
+                        <div class="post-item">
+                            <div class="post-meta">
+                                <span>NEWS</span>
+                                <span style="font-size: 14px; opacity: 0.8; color: white;">Dec 21, 2024</span>
+                            </div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 10px; line-height: 1.4; color: white;">Traffic safety campaign shows positive results</h4>
+                            <p style="font-size: 14px; opacity: 0.8; line-height: 1.5; color: white;">Recent traffic safety initiatives have resulted in a significant reduction in road accidents across The Gambia, improving overall road safety for citizens.</p>
+                        </div>
+                        
+                        <div class="post-item">
+                            <div class="post-meta">
+                                <span>NEWS</span>
+                                <span style="font-size: 14px; opacity: 0.8; color: white;">Dec 20, 2024</span>
+                            </div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 10px; line-height: 1.4; color: white;">Community policing program strengthens security</h4>
+                            <p style="font-size: 14px; opacity: 0.8; line-height: 1.5; color: white;">The community policing initiative continues to strengthen relationships between police and citizens, creating safer neighborhoods across The Gambia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Numbers Section - Exact Rwanda Police Style with Gambia Numbers -->
+    <section class="emergency-section-rwanda">
+        <div class="container">
+            <h2 class="section-title">
+                Emergency Toll-Free Numbers
+            </h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 60px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                In case of emergency, call these numbers for immediate assistance
+            </p>
+            <div class="emergency-grid">
+                <div class="emergency-card">
+                    <div class="phone-icon">
+                        <i class="fas fa-ambulance" style="font-size: 30px; color: white;"></i>
+                    </div>
+                    <h3 style="color: #1a365d; margin-bottom: 15px; font-size: 1.3rem; font-weight: bold;">Emergency</h3>
+                    <div class="phone-number">117</div>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 15px;">24/7 Emergency Response</p>
+                    <a href="tel:117" class="call-btn">Call Now</a>
+                </div>
+                
+                <div class="emergency-card">
+                    <div class="phone-icon">
+                        <i class="fas fa-car-crash" style="font-size: 30px; color: white;"></i>
+                    </div>
+                    <h3 style="color: #1a365d; margin-bottom: 15px; font-size: 1.3rem; font-weight: bold;">Traffic Accidents</h3>
+                    <div class="phone-number">118</div>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 15px;">Road Traffic Incidents</p>
+                    <a href="tel:118" class="call-btn">Call Now</a>
+                </div>
+                
+                <div class="emergency-card">
+                    <div class="phone-icon">
+                        <i class="fas fa-user-shield" style="font-size: 30px; color: white;"></i>
+                    </div>
+                    <h3 style="color: #1a365d; margin-bottom: 15px; font-size: 1.3rem; font-weight: bold;">Police Complaints</h3>
+                    <div class="phone-number">119</div>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 15px;">Report Police Misconduct</p>
+                    <a href="tel:119" class="call-btn">Call Now</a>
+                </div>
+                
+                <div class="emergency-card">
+                    <div class="phone-icon">
+                        <i class="fas fa-handshake" style="font-size: 30px; color: white;"></i>
+                    </div>
+                    <h3 style="color: #1a365d; margin-bottom: 15px; font-size: 1.3rem; font-weight: bold;">Anti Corruption</h3>
+                    <div class="phone-number">120</div>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 15px;">Report Corruption</p>
+                    <a href="tel:120" class="call-btn">Call Now</a>
+                </div>
+                
+                <div class="emergency-card">
+                    <div class="phone-icon">
+                        <i class="fas fa-ship" style="font-size: 30px; color: white;"></i>
+                    </div>
+                    <h3 style="color: #1a365d; margin-bottom: 15px; font-size: 1.3rem; font-weight: bold;">Maritime Problems</h3>
+                    <div class="phone-number">121</div>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 15px;">Waterway Incidents</p>
+                    <a href="tel:121" class="call-btn">Call Now</a>
+                </div>
+                
+                <div class="emergency-card">
+                    <div class="phone-icon">
+                        <i class="fas fa-id-card" style="font-size: 30px; color: white;"></i>
+                    </div>
+                    <h3 style="color: #1a365d; margin-bottom: 15px; font-size: 1.3rem; font-weight: bold;">Driving License</h3>
+                    <div class="phone-number">122</div>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 15px;">License Inquiries</p>
+                    <a href="tel:122" class="call-btn">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section - Exact Rwanda Police Style with Gambia Services -->
+    <section class="services-section-rwanda">
+        <div class="container">
+            <h2 class="section-title">
+                Our Services
+            </h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 60px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                We provide comprehensive police services to ensure the safety and security of all citizens in The Gambia.
+            </p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Traffic and Road Safety</h3>
+                        <p>Ensuring safe roads and traffic management across The Gambia through comprehensive traffic control and road safety initiatives.</p>
+                        <a href="#" class="btn-outline-service">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Testing and Licensing</h3>
+                        <p>Professional testing and licensing services for drivers, ensuring competent and qualified drivers on our roads.</p>
+                        <a href="#" class="btn-outline-service">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Automobile Inspections</h3>
+                        <p>Comprehensive vehicle inspection services to ensure roadworthiness and safety standards for all vehicles.</p>
+                        <a href="#" class="btn-outline-service">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Pause news ticker on hover
+        const ticker = document.querySelector('.ticker-scroll');
+        if (ticker) {
+            ticker.addEventListener('mouseenter', () => {
+                ticker.style.animationPlayState = 'paused';
+            });
+            
+            ticker.addEventListener('mouseleave', () => {
+                ticker.style.animationPlayState = 'running';
+            });
+        }
+
+        // Search functionality
+        const searchInput = document.querySelector('.search-box input');
+        if (searchInput) {
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    const searchTerm = searchInput.value;
+                    if (searchTerm.trim()) {
+                        alert(`Searching for: ${searchTerm}`);
+                    }
+                }
+            });
+        }
+
+        // Emergency call tracking
+        const callButtons = document.querySelectorAll('.call-btn');
+        callButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const phoneNumber = btn.getAttribute('href').replace('tel:', '');
+                const serviceName = btn.closest('.emergency-card').querySelector('h3').textContent;
+                
+                // Show confirmation
+                if (confirm(`Call ${serviceName} at ${phoneNumber}?`)) {
+                    console.log(`Emergency call: ${serviceName} - ${phoneNumber}`);
+                } else {
+                    e.preventDefault();
+                }
+            });
+        });
+
+        // Add smooth scrolling for any anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add loading animation
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Mobile menu toggle (if needed)
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu-rwanda');
+        
+        if (mobileMenuToggle && navMenu) {
+            mobileMenuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
